@@ -45,13 +45,9 @@ class Notes:
   def deserialize(self):
     try:
       with open('notes.txt', 'rb+') as f:
-        self.all_notes = pickle.load(f)
+        notes = pickle.load(f)
     except EOFError:
       pass
 
-    return self.all_notes
-
-
-
-
+    return notes
 
